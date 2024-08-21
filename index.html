@@ -23,6 +23,18 @@
   <strong>Te invito a revisar su comportamiento en la consola de esta página ó en el archivo HTML.</strong>
 </p>
 
+<hr>
+
+<h2>2. CONST </h2>
+<p>No nos permitira cambiar el valor de las variables <strong>"Primitivas"</strong> osea con valores string, number,
+  boolean, null, undefined y NaN.
+</p>
+<img id="img3" src="assets/img/example3.png" alt="ejemplo">
+<p><strong>Revisa la consola para ver el contenido</strong></p> <br>
+<p>Con <strong>Objetos y Areglos ó Valores Compuestos en general</strong> si nos permite cambiar/aumentar/elimnar los
+  valores!</p>
+<img id="img4" src="assets/img/example4.png" alt="ejemplo">
+
 
 <script>
 
@@ -60,6 +72,34 @@
     console.log("Variable Musica dentro del Bloque", musica2);
   }
   console.log("Variable Musica despues del Bloque", musica2);
+
+  console.log("**********const**********")
+  /*Utilizamos const cuando nosotros sepamos o tengamos variables que no vayan
+  a cambiar su valor durante el flujo de la aplicación */
+  let a;
+  const PI = 3.1416;
+  /* PI = 3.15; */ // No podemos sobreescribir el valor de una variable const
+  /* const nueve; */ //Lo que nos dice es que no podemos tener variables const VACIAS
+  console.log(PI);
+  a = "SamCode17"
+  console.log(a); // con let si podemos tener variables vacias
+
+  const objeto = {
+    nombre: "Samuel",
+    edad: 35
+  }
+
+  const colores = ["Blanco", "Negro", "Azul"];
+
+  console.log(objeto);
+  console.log(colores);
+
+  objeto.correo = "correo@gmail.com";
+  colores.push("Anaranjado");
+
+  console.log(objeto);
+  console.log(colores);
+
 
 </script>
 

@@ -13,3 +13,12 @@ h2 {
 span {
   color: darkgoldenrod;
 }
+
+#img3 {
+  width: 1000px;
+}
+
+#img4 {
+  width: 600px;
+  height: auto;
+}
