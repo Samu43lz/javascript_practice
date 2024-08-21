@@ -4,8 +4,64 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="assets/css/style.css">
   <title>Fundamentos de Javascript!</title>
 </head>
+<h1>Fundamentos <span>Javascript</span></h1>
+
+<h2>1. VAR ó LET </h2>
+<p>Si declaramos una variable con var se va guardar en el objeto window(en el navegador, Javascript), que con let no, y
+  lo probamos tambien
+  con la terminal Bash con el objeto de node.js donde al window se le llama "global":
+</p>
+<img src="assets/img/example.png" alt="ejemplo1">
+<img src="assets/img/example2.png" alt="ejemplo2">
+
+<p>
+  Comprobamos que Fronted_navegador(Javascript del front) como Backend_node.js (Javascript del lado del servidor) por lo
+  tanto se considera una mala practica declarar una variable con VAR.
+  <strong>Te invito a revisar su comportamiento en la consola de esta página ó en el archivo HTML.</strong>
+</p>
+
+
+<script>
+
+  var hola = "Hola mundo" //la variable sera de ambito global
+  let hello = "hello world" // la variable sera de ambito de bloque
+
+  console.log(hola);
+  console.log(hello);
+  console.log(window); // todas las variables hechas con var se van a quedar en el scoup global del documento
+  console.log(window.hola)
+  console.log(window.hello) //como vemos nos sale "undefined" porque "let"  solo permite que la variable exista en el bloque en el ha sido definido.
+
+
+  console.log("************var************")
+  // Ambito de bloque
+  var musica = "Rock";
+  console.log("Variable Musica antes del Bloque", musica);
+  //Esto es un bloque
+  {
+    var musica = "Pop";
+    console.log("Variable Musica dentro del Bloque", musica);
+  }
+  //Salimos del bloque
+  console.log("Variable Musica despues del Bloque", musica);
+  /*Como vemos , no nos respeta la variable musica "Rock" que estaba afuera. saliendo nos coloca
+  el valor de "Pop". */
+
+  console.log("************let************")
+  // Por eso utilizamos "let" en lugar de "var" como buena practica
+
+  let musica2 = "Rock";
+  console.log("Variable Musica antes del Bloque", musica2);
+  {
+    let musica2 = "Pop";
+    console.log("Variable Musica dentro del Bloque", musica2);
+  }
+  console.log("Variable Musica despues del Bloque", musica2);
+
+</script>
 
 <body>
 
