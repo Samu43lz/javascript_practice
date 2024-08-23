@@ -7,40 +7,53 @@
   <link rel="stylesheet" href="assets/css/style.css">
   <title>Fundamentos de Javascript!</title>
 </head>
-<h1>Fundamentos <span>Javascript</span></h1>
 
-<h2>1. VAR ó LET </h2>
-<p>Si declaramos una variable con var se va guardar en el objeto window(en el navegador, Javascript), que con let no, y
-  lo probamos tambien
-  con la terminal Bash con el objeto de node.js donde al window se le llama "global":
-</p>
-<img src="assets/img/example.png" alt="ejemplo1">
-<img src="assets/img/example2.png" alt="ejemplo2">
-
-<p>
-  Comprobamos que Fronted_navegador(Javascript del front) como Backend_node.js (Javascript del lado del servidor) por lo
-  tanto se considera una mala practica declarar una variable con VAR.
-  <strong>Te invito a revisar su comportamiento en la consola de esta página ó en el archivo HTML.</strong>
-</p>
-
+<main>
+  <h1>Fundamentos <span>Javascript</span></h1>
+  <ul>
+    <li><a href="#var-let">Variables ¿ Var ó Let ?</a></li>
+    <li><a href="#const">Variable Const</a></li>
+    <li><a href="strings.html">Cadenas de texto (Strings)</a></li>
+  </ul>
+</main>
 <hr>
+<article id="var-let">
+  <h2>1. VAR ó LET </h2>
+  <p>Si declaramos una variable con var se va guardar en el objeto window(en el navegador, Javascript), que con let no,
+    y
+    lo probamos tambien
+    con la terminal Bash con el objeto de node.js donde al window se le llama "global":
+  </p>
+  <img src="assets/img/example.png" alt="ejemplo1">
+  <img src="assets/img/example2.png" alt="ejemplo2">
 
-<h2>2. CONST </h2>
-<p>No nos permitira cambiar el valor de las variables <strong>"Primitivas"</strong> osea con valores string, number,
-  boolean, null, undefined y NaN.
-</p>
-<img id="img3" src="assets/img/example3.png" alt="ejemplo">
-<p><strong>Revisa la consola para ver el contenido</strong></p> <br>
-<p>Con <strong>"Variables Compuestas" como Objetos, Arreglos, etc</strong>, si nos permite cambiar/aumentar/elimnar los
-  valores!</p>
-<img id="img4" src="assets/img/example4.png" alt="ejemplo">
-<h3>Entonces cual escogemos entre Let y Const cuando estemos con Valores Compuestos?
-</h3>
-<h5>Si nuestra variable se mantendra siendo todo el momento con la naturaleza que escogimos incialmente y solo cambia
-  sus "elementos"
-  escoge "const" si nuestra variable compuesta pasa de "Arreglo" a "Objeto"(osea que cambia su naturaleza) tendremos que
-  escoger "let"</h5>
-
+  <p>
+    Comprobamos que Fronted_navegador(Javascript del front) como Backend_node.js (Javascript del lado del servidor) por
+    lo
+    tanto se considera una mala practica declarar una variable con VAR.
+    <strong>Te invito a revisar su comportamiento en la consola de esta página ó en el archivo HTML.</strong>
+  </p>
+</article>
+<hr>
+<article id="const">
+  <h2>2. CONST </h2>
+  <p>No nos permitira cambiar el valor de las variables <strong>"Primitivas"</strong> osea con valores string, number,
+    boolean, null, undefined y NaN.
+  </p>
+  <img id="img3" src="assets/img/example3.png" alt="ejemplo">
+  <p><strong>Revisa la consola para ver el contenido</strong></p> <br>
+  <p>Con <strong>"Variables Compuestas" como Objetos, Arreglos, etc</strong>, si nos permite cambiar/aumentar/elimnar
+    los
+    valores!</p>
+  <img id="img4" src="assets/img/example4.png" alt="ejemplo">
+  <h3>Entonces cual escogemos entre Let y Const cuando estemos con Valores Compuestos?
+  </h3>
+  <h5>Si nuestra variable se mantendra siendo todo el momento con la naturaleza que escogimos incialmente y solo cambia
+    sus "elementos"
+    escoge "const" si nuestra variable compuesta pasa de "Arreglo" a "Objeto"(osea que cambia su naturaleza) tendremos
+    que
+    escoger "let"</h5>
+</article>
 
 <script>
 
@@ -105,7 +118,6 @@
 
   console.log(objeto);
   console.log(colores);
-
 
 </script>
 
