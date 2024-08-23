@@ -11,25 +11,90 @@
 <body>
   <header>
     <h1 class="title">Cadenas de texto (Strings)</h1>
+    <h5>Recuerda revisar la consola para ver como actuan!</h5>
   </header>
-  <main>
-
-  </main>
+  <hr>
+  <section>
+    <h2 class="sub-title">¿Como insertarlas?</h2>
+    <p>Podemos añadirlas con <u>comillas</u> <strong>simples</strong> o <strong>dobles</strong>. </p>
+    <img src="assets/img/strings-1.png" alt="ejemplo">
+  </section>
+  <hr>
+  <section>
+    <h2 class="sub-title">Objetos String</h2>
+    <p>Una forma de crear un <strong> objeto</strong> de tipo <strong>"string"</strong>
+      utilizando el <u>constructor</u> <strong>"string"</strong>.
+    </p>
+    <img src="assets/img/strings-2.png" alt="ejemplo">
+  </section>
+  <hr>
+  <section>
+    <h2 class="sub-title">Propiedad length</h2>
+    <p>La <u>propiedad</u> <strong>"length"</strong> muestra la cantidad de caracteres que tiene nuestro string.</p>
+    <img src="assets/img/strings-3.png" alt="ejemplo">
+  </section>
+  <hr>
+  <section>
+    <h2 class="sub-title">Metodos</h2>
+    <div>
+      <h4>Metodo: toUpperCase</h4>
+      <p>Este metodo <u>convierte</u> todos los caracteres de nuestro string en <strong>mayusculas</strong>.</p>
+      <img src="assets/img/strings-4.png" alt="ejemplo">
+    </div>
+    <div>
+      <h4>Metodo: toLowerCase</h4>
+      <p>Este metodo <u>convierte</u> todos los caracteres de nuestro string en <strong>minusculas</strong>.</p>
+      <img src="assets/img/strings-5.png" alt="ejemplo">
+    </div>
+    <div>
+      <h4>Metodo: includes</h4>
+      <p>Este metodo sirve para buscar una palabra en nuestro string. (nos bota true o false)</p>
+      <img src="assets/img/strings-6.png" alt="ejemplo">
+    </div>
+    <div>
+      <h4>Metodo: trim</h4>
+      <p>Este metodo quita los espacios en blanco o caracteres que haya en nuesto string.</p>
+      <img src="assets/img/strings-7.png" alt="ejemplo">
+    </div>
+    <div>
+      <h4>Metodo: split</h4>
+      <p>Este metodo separa cada palabra de nuestro string en comillas.</p>
+      <img src="assets/img/strings-8.png" alt="ejemplo">
+    </div>
+  </section>
+  <hr>
+  <footer>
+    <a href="index.html">Página Principal</a>⚡
+  </footer>
 
   <script>
     //Cadenas de texto aka Strings
     /* crtl + z para rebobinar código */
     let name = 'Samuel';
     let lastname = "Salazar";
-    let greeting = new String("Hello World")
+    let greeting = new String("Hello World");
+    let lorem = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis, quos alias corporis aliquam quasi odit unde eos eaque maiores eveniet nihil assumenda molestiae. Voluptate eveniet obcaecati  inventore cumque iure odit?"
     console.log(name, lastname, greeting);
     //La propiedad "length" muestra la cantidad de caracteres que tiene nuestro string
     console.log(
       name.length,
       lastname.length,
-      greeting.length
+      greeting.length,
+      /* metodo "toUpperCase" para colocar el valor de la variable en mayuscular */
+      name.toUpperCase(),
+      /* metodo "toLowerCase" para colocar el valor de la variable en minusculas */
+      lastname.toLowerCase(),
+      /* metodo "includes" para buscar una palabra en nuestro string */
+      lorem.includes("amet"),
+      lorem.includes("Samuel"),
+      /* metodo "trim" quita los espacios en blanco o caracteres que haya en nuesto string */
+      lorem.trim(),
+      /* metodo "split" separa cada palabra de nuestro string en comillas */
+      lorem.split(" ")
     );
-    
+
+
+
   </script>
 
 </body>
