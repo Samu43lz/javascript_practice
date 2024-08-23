@@ -1,11 +1,25 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="assets/css/style.css">
   <title>Fundamentos de Javascript!</title>
+  <style>
+    #img3 {
+      width: 1000px;
+    }
+
+    #img4 {
+      width: 600px;
+      height: auto;
+    }
+
+    span {
+      color: darkgoldenrod;
+    }
+  </style>
 </head>
 
 <main>
@@ -17,8 +31,8 @@
   </ul>
 </main>
 <hr>
-<article id="var-let">
-  <h2>1. VAR ó LET </h2>
+<section id="var-let">
+  <h2 class="title">1. VAR ó LET </h2>
   <p>Si declaramos una variable con var se va guardar en el objeto window(en el navegador, Javascript), que con let no,
     y
     lo probamos tambien
@@ -33,10 +47,10 @@
     tanto se considera una mala practica declarar una variable con VAR.
     <strong>Te invito a revisar su comportamiento en la consola de esta página ó en el archivo HTML.</strong>
   </p>
-</article>
+</section>
 <hr>
-<article id="const">
-  <h2>2. CONST </h2>
+<section id="const">
+  <h2 class="title">2. CONST </h2>
   <p>No nos permitira cambiar el valor de las variables <strong>"Primitivas"</strong> osea con valores string, number,
     boolean, null, undefined y NaN.
   </p>
@@ -53,7 +67,7 @@
     escoge "const" si nuestra variable compuesta pasa de "Arreglo" a "Objeto"(osea que cambia su naturaleza) tendremos
     que
     escoger "let"</h5>
-</article>
+</section>
 
 <script>
 
