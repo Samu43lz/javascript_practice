@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <title>Template Strings</title>
+  <style>
+    .imgf1 {
+      width: 800px;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1 class="title">Template Strings</h1>
+    <h5>No olvides revisar la consola.</h5>
+  </header>
+  <hr>
+  <article>
+    <h2>La Concatenación</h2>
+    <img class="imgf1" src="assets/img/t-strings.png" alt="example">
+    <p>Esto suele ser muy conflictivo y cansado, por eso hay un método de <strong>interpolación de variables</strong> .
+    </p>
+  </article>
+  <hr>
+  <article>
+    <h2>Interpolación de Variables (Template Strings)</h2>
+    <p> Meter las variables dentro de la cadena de texto <strong> sin necesidad de concatenar</strong> con el operador
+      "+". Para esto
+      debemos hacer uso de
+      Backticks " ` " , el signo de dolar " $ " y llaves " {} ".</p>
+    <img class="imgf1" src="assets/img/t-strings2.png" alt="example">
+  </article>
+  <hr>
+  <article>
+    <h2>Otros usos</h2>
+    <p>El Template String tambien nos permitira <strong> agregar a una variable, código HTML</strong> (Si lo hubieramos
+      hecho con
+      comillas simples
+      o dobles nos saldria error). Ademas, este respetara el indentado.</p>
+    <ul>
+      <li>Spring</li>
+      <li>Summer</li>
+      <li>Autumn</li>
+      <li>Winter</li>
+    </ul>
+    <img src="assets/img/t-strings3.png" alt="example">
+  </article>
+  <footer>
+    <a href="index.html">Página Principal</a>⚡
+  </footer>
+
+
+  <script>
+    //Concatenación
+    let name = "Samuel"
+    let lastname = "Salazar"
+    let greeting = "Hello my name is " + name + " " + lastname + ".";
+    console.log(greeting);
+
+    //Template Strings
+    let name1 = "Sam"
+    let lastname1 = "Salazar"
+    let greeting1 = `Hello my name is ${name1} ${lastname}.`
+    console.log(greeting1);
+
+    //Otro uso 
+    let ul = ` 
+        <ul>
+          <li>Spring</li>
+          <li>Summer</li>
+          <li>Autumn</li>
+          <li>Winter</li>
+        </ul>
+        `
+    console.log(ul);
+  </script>
+</body>
+
+</html>
