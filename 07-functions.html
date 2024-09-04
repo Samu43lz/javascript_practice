@@ -6,6 +6,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="assets/css/style.css">
   <title>Funciones</title>
+  <style>
+    img {
+      width: 700px;
+    }
+
+    span {
+      color: green;
+    }
+  </style>
 </head>
 
 <body>
@@ -29,8 +38,69 @@
     <h2>Invocación</h2>
     <img src="assets/img/function2.png" alt="ejemplo">
   </section>
+  <hr>
+  <section>
+    <h2>Return</h2>
+    <h3>¿Que es?</h3>
+    <p>
+      Imagina que estás en una tienda de juguetes, y quieres comprar algo. Le das dinero al cajero, y él te da el
+      juguete que quieres a cambio. En este caso, el dinero que le das es como los argumentos que le das a una función,
+      y el juguete que te devuelve es como el valor que la función te "regresa" o "devuelve" usando return.
+      Cuando escribes una función en programación, a veces quieres que esa función haga algo y luego te dé un resultado,
+      como resolver un problema matemático y darte la respuesta. Ese "resultado" lo obtenemos usando la palabra return.
+    </p>
+    <pre>
+      function sumar(a, b) {
+      return a + b; <span>// 'return' devuelve la suma de 'a' y 'b'</span> 
+      }
+      
+      let resultado = sumar(3, 4); <span>// Aquí llamamos a la función sumar</span> 
+      console.log(resultado);   <span>// Esto imprimirá '7'</span> 
+    </pre>
+    <p>Entonces, return es la forma en que una función te da una respuesta después de hacer su trabajo. Si no usas
+      return, la función puede hacer algo, como imprimir un mensaje, pero no te dará un valor de vuelta que puedas usar
+      más adelante. Es como si la tienda no te diera un juguete después de darles tu dinero.</p>
+    <img src="assets/img/function3.png" alt="ejemplo">
+  </section>
+  <hr>
+  <section>
+    <h2>Con Parámetros</h2>
+    <p>Los contenidos entre paréntesis en una función se llaman parámetros. Estos son valores o variables que la
+      función espera recibir cuando se invoca, y que se utilizan dentro de la función para realizar operaciones o
+      cálculos.
+      Cuando llamas a la función, proporcionas argumentos, que son los valores concretos que se pasan a esos parámetros.
+      Los valores que colocas cuando llamas a una función se llaman argumentos. Estos argumentos se pasan a los
+      parámetros
+      definidos en la función
+    </p>
+    <pre>
+      function saludar(nombre, edad) { <span>// 'nombre' y 'edad' son los parámetros</span> 
+        console.log(`Hola ${nombre}, tienes ${edad} años.`);
+      }
+      
+      <span>/ Llamada a la función con argumentos</span>/
+      saludar("Chiquita", 19); <span>// 'Chiquita' y '19' son los argumentos</span> 
+    </pre>
+    <img src="assets/img/function5.png" alt="ejemplo">
+    <h4>Tambien podemos colocar valores predefinidos a los parámetros (Ya que al no colocar nada nuestras variables
+      tendrian el valor de "Undefined".) </h4>
+    <img src="assets/img/function6.png" alt="ejemplo">
+  </section>
+  <hr>
+  <section>
+    <h2>Función Declarada vs Función Expresada</h2>
+    <p>La función <strong>Declarada</strong> te permitira invocarla en cualquier parte sin importar si
+      esta más arriba de la declaraciónde este mismo</p>
+    <img style="width: 1100px; height: 200px;" src="assets/img/function7.png" alt="ejemplo">
+    <p>La función <strong>Expresada</strong> es la que no tiene un nombre como tal y es un valor dentro de una variable.
+      Este además no
+      te dejara invocarla si aún no esta inicializada , es decir, si lo invocas antes que esta.</p>
+    <img style="width: 1280px; height: 200px;" src="assets/img/function8.png" alt="ejemplo">
+  </section>
+
 
   <script>
+    //Declaración
     function estoEsUnaFuncion() {
       console.log("Uno");
       console.log("Dos");
@@ -40,6 +110,46 @@
     //Invocación de función
 
     estoEsUnaFuncion();
+    /* Cuando el compilador o interprete encuentra 
+    la palabra "return", este ignorara 
+    todo lo posterior a este  y solo 
+    mostrara lo que este antes de este*/
+    function unaFuncionQueDevuelveValor() {
+      console.log("Uno");
+      return 19
+      console.log("Dos");
+      console.log("Tres");
+    }
+
+    // let valorDeFuncion = unaFuncionQueDevuelveValor();
+
+    // console.log(valorDeFuncion);
+
+    /* Función con Parametros */
+    function saludar(nombre = "Desconocido", edad = 0) {
+      console.log(`Hola mi nombre es ${nombre} y tengo ${edad} años.`)
+    }
+
+    saludar("Chiquita", 5);
+    saludar();
+
+    //Funciones Declaradas vs Funciones Expresadas
+
+    funcionDeclarada();
+
+    function funcionDeclarada() {
+      console.log("Esto es una función declarada, puede invocarse en cualquier parte de nuestro código, incluso antes de que la función sea decclarada");
+    }
+
+    funcionDeclarada();
+
+    //Función anónima (Una función que no tiene nombre)
+
+    const funcionExpresada = function () {
+      console.log("Esto es una función expresada, es decir, una función que se le ha asignado como valor a una variable, si invocamos esta función antes de su definición JS nos dirá 'Cannot access 'funcionExpresada' before initialization'")
+    }
+
+    funcionExpresada();
   </script>
 </body>
 
