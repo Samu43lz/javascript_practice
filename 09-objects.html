@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Objects</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <style>
+    img {
+      width: 1000px;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>Objetos</h1>
+    <p>Un objeto es una colección de pares de llave y valor muy parecido a lo que hacemos en CSS, dentro podemos colocar
+      muchos tipos de datos(todos). En Javascript es famosa la frase que dice "En Javascript todo es un objeto"</p>
+  </header>
+  <hr>
+  <section>
+    <h2>Estructura</h2>
+    <p>Un objeto puede contener cualquier tipo de dato, ademas,dentro de un objeto a las variables se les van a llamar
+      atributos/propiedades y a las funciones se les llama métodos</p>
+    <img src="assets/img/object.png" alt="ejemplo">
+  </section>
+  <hr>
+  <section>
+    <h3>Funciones dentro de Objetos</h3>
+    <p>Si queremos usar una función y queremos implementar un atributo del objeto en el que estamos debemos usar la
+      palabra clave (keyword) .this</p>
+    <img style="height: 200px;" src="assets/img/object2.png" alt="ejemplo">
+    <h3>Formas de mostrar en consola</h3>
+    <p>El que se recomienda y es más facil de utilizar es la de colocar el objeto + "." (atributo) y para las funciones
+      en este caso estando dentro de un objeto se les llama "Métodos" se los invoca colocando el nombre del objeto + (el
+      nombre del método) + "()"</p>
+    <img src="assets/img/object3.png" alt="ejemplo">
+  </section>
+  <hr>
+  <section>
+    <h3>Otros Métodos</h3>
+    <img src="assets/img/object4.png" alt="ejemplo">
+  </section>
+  <hr>
+  <footer>
+    <a href="index.html">Página Principal</a>⚡
+  </footer>
+
+  <script>
+    const b = {}
+
+    console.log(b);
+
+    // Un objeto puede contener cualquier tipo de dato
+    // en los objetos los atributos , son las "variables" que tiene un objeto
+    // Dentro de un objeto a las variables se les van a llamar atributos/propiedades y a las funciones se les llama métodos 
+    // Por ejemplo en la sección de los arrays en el método "ForEach" es una función interno/dentro del objeto "Array" por eso se le llama Método, ya que estamos llamando a una función que esta dentro de ese objeto.
+    const samuel = {
+      nombre: "Samuel",
+      apellido: "Salazar",
+      edad: 19,
+      pasatiempos: ["Tocar Guitarra", "Aprender Cosas Nuevas", "Escuchar Musica"],
+      soltero: true,
+      contacto: {
+        email: "correo@prueba.com",
+        teléfono: "51999518251"
+      },
+      saludar: function () {
+        console.log("Hola :)")
+      },
+      decirMiNombre: function () {
+        console.log(`Hola mi nombre es ${this.nombre} ${this.apellido} y tengo ${this.edad} años y me puedes contáctar por mi correo : ${this.contacto.email}`);
+      }
+    }
+    // "this" se utiliza para hacer referencia al objeto en el que esta y con esta podemos colocar el valor de los atributos del objeto en el que estamos y concatenar.
+
+    console.log(samuel);
+
+    console.log(samuel["nombre"]);
+    console.log(samuel.apellido);
+    console.log(samuel.pasatiempos);
+    console.log(samuel.pasatiempos[2]);
+    console.log(samuel.contacto);
+    console.log(samuel.contacto.teléfono);
+    samuel.saludar();
+    samuel.decirMiNombre();
+
+    console.log(Object.keys(samuel));
+    /*Es un metodo que tiene el prototipo objeto, objeto de Javascript 
+    que permite listar todas las llaves de un objeto*/
+
+    console.log(Object.values(samuel));
+    // Este metodo enlista los valores del objeto
+
+    console.log(samuel.hasOwnProperty("nombre"))
+    // Sirve para verificar si existe la propiedad que coloquemos en un objeto
+
+
+  </script>
+
+</body>
+
+</html>
