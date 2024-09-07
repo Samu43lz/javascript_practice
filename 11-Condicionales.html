@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <title>Condicionales</title>
+  <style>
+    .std {
+      width: 600px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <head>
+    <h1>Condicionales</h1>
+  </head>
+  <hr>
+  <section>
+    <h2>If - Else</h2>
+    <p>En JavaScript, if-else es una <strong>estructura de control</strong> que se usa para tomar decisiones en el
+      código. La declaración
+      "if"
+      evalúa una condición: si es verdadera, ejecuta el bloque de código dentro de ella; si es falsa, ejecuta el bloque
+      dentro
+      de "else" (si existe). Esto permite que el programa realice diferentes acciones según la situación. Por ejemplo:
+    </p>
+    <img class="std" src="assets/img/condicionales.png" alt="ejemplo">
+    <p>Podemos alternar entre <strong>Operadores</strong> segun sea necesario</p>
+  </section>
+  <hr>
+  <section>
+    <h2>If - If Else - Else</h2>
+    <p>En JavaScript, if - else if - else es una estructura de control que permite evaluar múltiples condiciones de
+      manera
+      secuencial. La sentencia "if" verifica la primera condición, si es verdadera, se ejecuta su bloque de código. Si
+      es
+      falsa, <strong>pasa a evaluar la siguiente condición con "else if</strong>". Si ninguna de las condiciones
+      anteriores es verdadera,
+      entonces el bloque de "else" se ejecuta como última opción.</p>
+    <pre>
+
+            Dejame domir 0hrs - 5hrs
+            Buenos dias 6hr - 11hr
+            Buenas Tardes 12hrs - 18hrs
+            Buenas noches 19hrs - 23hrs
+            
+      </pre>
+    <img class="std" src="assets/img/condicionales2.png" alt="ejemplo">
+  </section>
+  <hr>
+  <section>
+    <h2>Operador Ternario</h2>
+    <p>El operador ternario en JavaScript <strong>es una forma simplificada de escribir una declaración if-else en una
+        sola
+        línea.</strong> Se
+      usa para evaluar una condición y devolver uno de dos valores dependiendo de si la condición es verdadera o falsa.
+      se utiliza con el signo (" ? ")
+    </p>
+    <img class="std" src="assets/img/condicionales3.png" alt="ejemplo">
+    <p>Aunque es de "una sola linea" al colocar 2 caminos "Largos" no hara muy legible el código en una sola linea por
+      lo tanto la buena practica sugiere usar esta sintaxis. (Dividir el código)</p>
+  </section>
+  <hr>
+  <section>
+    <h2>Switch - Case</h2>
+    <p>El switch-case en JavaScript es una estructura de control que se utiliza para tomar decisiones múltiples de
+      manera más
+      organizada cuando hay varias opciones posibles. En lugar de usar múltiples if-else if, switch compara el valor de
+      una
+      variable o expresión con diferentes casos y ejecuta el bloque de código correspondiente. Si no se encuentra
+      coincidencia, se puede usar default para manejar el caso por defecto.</p>
+    <pre>
+      Domingo - 0
+      Lunes - 1
+      Martes - 2
+      Miercoles - 3
+      Jueves - 4
+      Viernes - 5
+      Sabado - 6
+    </pre>
+    <img class="std" src="assets/img/condicionales4.png" alt="ejemplo">
+  </section>
+
+  <script>
+    /* If - Else */
+
+    let edad = 17
+
+    if (edad > 17) {
+      console.log("Eres mayor de edad");
+    } else {
+      console.log("Eres menor de edad");
+    }
+
+    if (edad >= 18) {
+      console.log("Eres mayor de edad");
+    } else {
+      console.log("Eres menor de edad");
+    }
+
+    /* if - else if - else */
+    /*
+    Dejame domir 0hrs - 5hrs
+    Buenos dias 6hr - 11hr
+    Buenas Tardes 12hrs - 18hrs
+    Buenas noches 19hrs - 23hrs
+    */
+
+    let hora = 12;
+
+    if (hora >= 0 && hora <= 5) {
+      console.log("Dejame Domir")
+    } else if (hora >= 6 && hora <= 11) {
+      console.log("Buenos dias, I'm still a bit sleepy :(")
+    } else if (hora >= 12 && hora <= 18) {
+      console.log("Buenas Tardes! What will we eat?")
+    } else {
+      console.log("Buenas noches");
+    }
+
+
+    // Operador Ternario (Condición)? verdadero:falso
+    //Es como la simplificación de un if else , pero en una solo linea de código. Si tu necesitas ejecutar varias lineas de código en un if o else, entonces necesitaras la anteior, een en el ternario solo es una linea.
+
+    let eresMayor = (edad >= 18)
+      ? "Eres mayor de edad"
+      : "Eres menor de edad";
+    console.log(eresMayor);
+
+
+
+    // Switch - Case 
+    // Cuando tengamos diferentes valores para una misma variable
+
+    /*
+    Domingo - 0
+    Lunes - 1
+    Martes - 2
+    Miercoles - 3
+    Jueves - 4
+    Viernes - 5
+    Sabado - 6
+    */
+
+    let dia = 5;
+
+    switch (dia) {
+      case 0:
+        console.log("Domingo");
+        break;
+      case 1:
+        console.log("Lunes");
+        break;
+      case 2:
+        console.log("Martes")
+        break;
+      case 3:
+        console.log("Miercoles");
+        break;
+      case 4:
+        console.log("Jueves");
+        break;
+      case 5:
+        console.log("Viernes");
+        break;
+      case 6:
+        console.log("Sabado");
+        break;
+      default:
+        console.log("Coloque un número dentro del rango");
+        break;
+    }
+
+  </script>
+</body>
+
+</html>
