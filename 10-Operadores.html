@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <title>Operadores</title>
+</head>
+
+<body>
+
+  <head>
+    <h1>Operadores</h1>
+  </head>
+  <hr>
+  <section>
+    <h2>Operadores Aritmeticos</h2>
+    <p>Como su palabra dice, podemos hacer operaciones aritmeticas con stas. los signos son : + , - , * , / , % y ()
+    </p>
+    <img src="assets/img/operadores.png" alt="ejemplo">
+    <h3>Operador Modulo "%"</h3>
+    <p>Nos devuelve el residuo, y unicamente el residuo del primer resultado que salga de esa división sin que se siga
+      resolviendo (osea sin aumentarle ceros para seguir resolviendo) Aqui tenemos el ejemplo de 5/2 donde decimos que
+      con "2" podemos llegar a 4 entonces 2 seria el cociente y el 4 y el 5 se restarian dando como resultado el número
+      1 y este seria el residuo osea lo que nos da el operador de modulo.</p>
+    <img src="assets/img/operadores2.png" alt="ejemplo">
+  </section>
+  <hr>
+  <h2>Operadores Relacionales</h2>
+  <img src="assets/img/operadores3.png" alt="ejemplo">
+  <h3>Los de igualdad</h3>
+  <p>= 1 igual es asignación de variable
+    == 2 iguales es comparación de valores
+    === 3 iguales es comparación de tipo de dato y valor</p>
+  <h4>Con "=="</h4>
+  <p style="color: red;">La buena practica es utilizar la comparación triple, la compración doble se considera una mala
+    practica
+    (De todas formas leer la parte final de esta sección con el ejemplo que di)
+  </p>
+  <p>Todos true debido a que sus valores tienden a lo mismo</p>
+  <img src="assets/img/operadores5.png" alt="ejemplo">
+  <h4>Con "==="</h4>
+  <p>Aqui ya hay False debido al tipo de dato donde ya no hay igualdad</p>
+  <img src="assets/img/operadores6.png" alt="ejemplo">
+  <h3> <i>// Uso de == vs ===.</i> <br>
+    Hay veces que yo quiero comparar una variable con un valor numérico, por ejemplo ( a == 7), pero esa variable es un
+    numero que ha ingresado el usuario por el teclado, o la estoy sacando de algún string, y yo quiero saber si eso es
+    un 7,
+    no me importa el tipo de dato. En ese caso utilizar === no me estaría ayudando, es decir que depende del caso es mas
+    útil un operador que otro.</h3>
+  <hr>
+  <section>
+    <h2>Incremento y Decremento</h2>
+    <p>Podemos utilizar este atajo para incrementar el valor de una variable sin tener que hacerlo asi : <strong>i = i +
+        2</strong>
+      (Ejemplo) esto lo podemos hacer con cualquier operador aritmetico</p>
+    <img src="assets/img/operadores7.png" alt="ejemplo">
+    <h3>Operador Unario</h3>
+    <p>Sirve para aumentar o disminuir el valor de las variables unidad por unidad.</p>
+    <img src="assets/img/operadores8.png" alt="ejemplo">
+    <h3> <i>// Uso de i++ vs ++i. (¿Cual usar?)</i> <br>
+      i++, primero toma la variable para la operación, y luego la incrementa en 1. <br>
+      ++i, primero hace el incremento y luego hace la operación con el resultado. <br><br>
+      Muchas veces, dependiendo de lo que queremos lograr en una función, por ejemplo el caso de un juego de naipes que
+      estuve
+      realizando, yo quería saber de quien fue el ultimo movimiento, y la variable turno es la que me acumulaba un valor
+      que
+      me permite saber quien era el próximo en jugar, para lo que implementar el ++turno, me ahorró muchas líneas de
+      código.
+      Era una función que se aplicaba a el jugador que aun no había jugado, mientras aun jugaba el jugador anterior.
+      Nuevamente, si los utilizamos de manera inteligente, son muy útiles, dependiendo el caso.</h3>
+  </section>
+  <hr>
+  <section>
+    <h2>Operadores Lógicos</h2>
+    <h3>Operador Not</h3>
+    <p>Niega, es decir lo que es true lo vuelve false y viceversa. Se utiliza " ! "</p>
+    <img src="assets/img/operadores9.png" alt="ejemplo">
+    <h3>Operador OR</h3>
+    <p>Cuando tengo 2 o mas condiciones, con que una se cumpla, es decir sea verdadera, el OR validara. Se utiliza " ||
+      ". <br>En este caso
+      la primera condición se cumple y la segunda no, pero el OR lo aceptara.
+    </p>
+    <img src="assets/img/operadores10.png" alt="ejemplo">
+    <h3>Operador AND</h3>
+    <p>Cuando tengo 2 o más condiciones, todas tienen que cumplirse, es decir, ser verdaderas para que AND se valide. Se
+      utiliza " && "</p>
+    <img src="assets/img/operadores11.png" alt="ejemplo">
+  </section>
+  <hr>
+  <footer>
+    <a href="index.html">Página Principal</a>⚡
+  </footer>
+
+
+
+
+  <script>
+
+    //Nos devuelve el residuo de una división
+    let modulo = 5 % 2
+    console.log(modulo);
+    let multiplicacion = 5 * 5
+    console.log(multiplicacion);
+    let division = 5 / 2
+    console.log(division);
+    let operacion = (5 + 5) - 10 * 3;
+    console.log(operacion);
+
+    // Operadores
+
+    console.log(9 > 9);
+    console.log(9 > 8);
+    console.log(8 >= 9);
+    console.log(9 >= 8);
+    console.log(7 <= 7);
+
+    /*  =  1 igual es asignación de variable
+        == 2 iguales es comparación de valores
+        === 3 iguales es comparación de tipo de dato y valor
+    La buena practica es utilizar la comparación triple, la compración doble se considera una mala practica
+        */
+
+    console.log(7 == 7); //true
+    console.log("7" == 7); //true
+    console.log(0 == false) //true
+
+    console.log(7 === 7); //true
+    console.log("7" === 7); //false
+    console.log(0 === false); //false 
+    //uno es número y otro boolean
+
+
+    // Incremento  Decremento
+
+    let i = 1;
+
+    i += 3;
+    i -= 2;
+    console.log(i);
+
+    // operador unario
+    //para desminuir o aumentar el valor de las variables unidad por unidad.
+    i--;
+    i++;
+    --i;
+    ++i;
+    console.log(i);
+
+    //Operadores Lógicos
+    /* Lógicos
+    ! -Not (Niega, es decir lo que es true lo vuelve false y viceversa)
+    || -Or (Cuando tengo 2 o mas condiciones, con que una se cumpla, es decir sea verdadera, el OR validara)
+    && -And (Cuando tengo 2 o más condiciones, todas tienen que cumplirse, es decir, ser verdaderas para que AND se valide)
+    */
+
+    console.log(!true); //Sera false
+    console.log(!false); //Sera true
+
+    console.log((9 === 9) || ("9" === 9)); //True
+
+    console.log((9 === 9) && ("9" === 9)); //false
+  </script>
+</body>
+
+</html>
