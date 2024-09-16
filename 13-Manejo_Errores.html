@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <title>Manejo de Errores</title>
+  <style>
+    img {
+      width: 650px;
+      height: 310px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <head>
+    <h1>Manejo de Errores</h1>
+    <h3>Mini-Temario</h3>
+    <li><a href="#try-catch-finally">Try-Catch-Finally</a></li>
+    <li><a href="#error-personalizado">Crear un Error Personalizado (Con Try-Catch)</a></li>
+    <li><a href="#importancia">Importancia</a></li>
+  </head>
+  <hr>
+  <section>
+    <h2>Depuración</h2>
+    <p>La Depuración <strong>es el proceso de identificar, analizar y corregir errores o problemas en un programa de
+        software.</strong>
+      Es
+      una
+      parte crucial del desarrollo de software para asegurar que el código funcione correctamente y cumpla con los
+      requisitos
+      establecidos.
+      Implica identificar errores, analizar el comportamiento del programa, hacer correcciones, y validar que las
+      soluciones
+      sean efectivas.</p>
+
+    <ul>
+      <h3>Try-catch:</h3>
+      <li>Facilita la identificación y manejo de errores específicos, proporcionando una forma de registrar y
+        controlar
+        errores sin detener la ejecución del programa.
+      </li>
+      <h3>Depuración:</h3>
+      <li>Es el proceso general de encontrar y corregir errores, y <strong>try-catch es una herramienta valiosa en
+          este
+          proceso para manejar errores en tiempo de ejecución.</strong> </li>
+    </ul>
+    <br>
+    <p><strong>La implementación de try-catch es solo una parte del proceso de depuración</strong> , pero es fundamental
+      para manejar
+      errores de
+      manera efectiva y mejorar la robustez del código.
+    </p>
+  </section>
+  <hr>
+  <section id="try-catch-finally">
+    <h2>Try-Catch-Finally</h2>
+    <p>try-catch-finally es una estructura en JavaScript (y otros lenguajes de programación) <strong>que se utiliza para
+        manejar
+        errores o excepciones en el código, asegurando que incluso si ocurre un error, el programa no se interrumpa de
+        forma
+        inesperada.</strong> Gracias a esto no nos saltara el tipico mensaje de Error de Javascript y además la
+      estructura nos dira
+      en que nos equivocamos.</p>
+    <p><strong>Finally</strong> es útil para limpieza de recursos (cerrar archivos, conexiones) o acciones críticas que
+      deben ejecutarse
+      sin importar lo
+      que pase en el bloque try o catch. (Es opcional y demás este bloque no se utiliza mucho, mas que todo en BACKEND)
+    </p>
+    <img src="assets/img/mde.png" alt="ejemplo">
+    <h5>Es necesario colocar un console.log con la variable error dentro de las llaves de Catch para que te muestre el
+      error. Tal y como en el
+      ejemplo. <br> (O podemos colocar nuestro propio tipo de error, como una alerta, etc.) </h5>
+    <h3> <span style="color: rgb(0, 102, 255);">Usando la Estructura!</span></h3>
+    <p>El programa no se interrumpe y además te muestra los errores.</p>
+    <img src="assets/img/mde2.png" alt="ejemplo">
+    <img style="width: 650px; height: 250px;" src="assets/img/mde3.png" alt="ejemplo">
+    <h3><span style="color: crimson;">Sin la Estructura</span></h3>
+    <p>El programa se interrumpira</p>
+    <img src="assets/img/mde4.png" alt="ejemplo">
+    <img style="width: 650px; height: 250px;" src="assets/img/mde5.png" alt="ejemplo">
+  </section>
+  <hr>
+  <section id="error-personalizado">
+    <h2>Crear un Error Personalizado (Con Try-Catch)</h2>
+    <p><strong>La función isNaN() </strong>(abreviatura de "is Not a Number") se utiliza para comprobar si el valor de
+      una variable no es un número.
+      Si el valor de numero es "a" (una cadena), isNaN(numero) devolverá true, indicando que no es un número. Entonces
+      se dara paso a mostrar nuestro código personalizado (Esto no solo lo podemos hacer con isNaN, podemos jugar y
+      hacer
+      varias condiciones)</p>
+    <ul>
+      <li>new Error() crea un objeto de error.</li>
+      <li>throw lanza ese objeto, deteniendo el flujo normal del programa. No se mostrará el código posterior a ese
+        error.(En este caso como esta dentro de un if, solo para el flujo dentro de las llaves)</li>
+      <li>catch recibe el error lanzado y lo almacena en una variable, en este caso llamada error.
+      </li>
+    </ul>
+    <img src="assets/img/mde6.png" alt="ejemplo">
+    <img style="width: 620px; height: 200px;" src="assets/img/mde7.png" alt="ejemplo">
+  </section>
+  <br><br><br><br>
+  <hr>
+  <section id="importancia">
+    <h3 style="color: green; font-size: 27px;">Importancia</h3>
+    <p>Usar un try-catch con un error personalizado es perfecto para manejar situaciones como cuando un usuario
+      ingresa
+      un dato
+      no numérico.
+
+      Supongamos que tienes un formulario o una entrada donde el usuario debe ingresar un número. Si ingresa un valor
+      que no
+      es numérico, puedes manejarlo con try-catch y un error personalizado para darle un mensaje adecuado y evitar que
+      tu
+      aplicación falle inesperadamente. (Como anteriormente dije, podemos cualquier condición dependiendo de que
+      queremos evaluar en el código)</p>
+    <br>En este caso estamos utilizando "Console.Log" de manera de
+    ejemplo. <strong>Usar
+      console.log es útil para la depuración durante el desarrollo</strong> , pero para aplicaciones en producción, es
+    importante
+    ofrecer retroalimentación clara y útil al usuario. <strong>Puedes usar métodos como alert, actualizar elementos de
+      la
+      interfaz,
+      mostrar modales personalizados, o registrar errores en un servidor</strong> para proporcionar una mejor
+    experiencia de
+    usuario y
+    manejar errores de manera efectiva.
+    </p>
+    <h4>Sin Try-Catch</h4>
+    <p>Si ocurre un error en el código y no hay un bloque try-catch para manejarlo, <strong>el programa se detendrá
+        abruptamente
+        y
+        mostrará un mensaje de error en la consola.</strong> Esto interrumpe la ejecución de la aplicación y puede
+      resultar en una
+      <strong>mala
+        experiencia para el usuario.</strong>
+  </section>
+  <br><br>
+  <hr>
+  <footer>
+    <a href="index.html">Página Principal</a>⚡
+  </footer>
+
+
+
+
+  <script>
+
+    /*     try {
+    
+        } catch (error) {
+          console.log("Aqui se muestra el error")
+          console.log(error);
+        } finally {
+          console.log("Mensaje")
+        } */
+
+
+
+    try {
+      let numero = "a";
+
+      if (isNaN(numero)) {
+        throw new Error("El caractér introducido no es un número");
+        console.log("Hola");
+      }
+      console.log(numero * numero);
+    } catch (error) {
+      console.log(`Se produjo el siguiente ${error}`);
+    }
+
+
+
+  </script>
+</body>
+
+</html>
